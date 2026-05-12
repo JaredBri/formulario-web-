@@ -24,7 +24,7 @@ btn.addEventListener("click", function() {
   if (isNaN(n1) || isNaN(n2) || isNaN(n3) || isNaN(n4)) {
     resultado.textContent = "Debes ingresar las cuatro notas";
     return;
-  } else if (n1 <= 0 || n2 <= 0 || n3 <= 0 || n1 > 7 || n2 > 7 || n3 > 7){
+  } else if (n1 <= 0 || n2 <= 0 || n3 <= 0 || n4<= 0 || n1 > 7 || n2 > 7 || n3 > 7 || n4 >7){
     resultado.textContent = "La nota debe estar entre 1 a 7";
     return;
   }else if (isNaN(porc1) || isNaN(porc2) || isNaN(porc3) || isNaN(porc4)){
