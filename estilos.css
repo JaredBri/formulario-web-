@@ -9,11 +9,7 @@ body {
   padding: 40px;
 }
 
-h1{
-  text-align: center;
-}
-
-label{
+input, h1, label{
   text-align: center;
 }
 
