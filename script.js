@@ -1,10 +1,7 @@
 // Función que calcula el promedio
-// function calcularPromedio(nota1, nota2, nota3, nota4) {
-//   return (nota1 + nota2 + nota3 + nota4) / 4;
-// }
 
 function calcularConPorcentaje(nota1, nota2, nota3, nota4, porcentaje1, porcentaje2, porcentaje3, porcentaje4){
-  return (nota1 * (porcentaje1/100) + nota2 * (porcentaje2/100) + nota3 * (porcentaje3/100) + nota4 * (porcentaje4/100))/4;
+  return (nota1 * (porcentaje1/100) + nota2 * (porcentaje2/100) + nota3 * (porcentaje3/100) + nota4 * (porcentaje4/100));
 }
 
 // Capturamos los elementos del HTML
@@ -31,14 +28,17 @@ btn.addEventListener("click", function() {
     resultado.textContent = "La nota debe estar entre 1 a 7";
     return;
   }else if (isNaN(porc1) || isNaN(porc2) || isNaN(porc3) || isNaN(porc4)){
-    resultado.textContent = "Debes ingresar los cuatro porcentajes"
+    resultado.textContent = "Debes ingresar los cuatro porcentajes";
+    return;
+  }else if (porc1+porc2+porc3+porc4 != 100){
+    resultado.textContent = "La suma de los porcentajes debe ser 100";
+    return;
   }
 
   // Llamamos a la función
-  //const promedio = calcularPromedio(n1, n2, n3, n4);
-  const promedioConPorcentaje = calcularConPorcentaje(porc1, porc2, porc3, porc4);
+  const promedioConPorcentaje = calcularConPorcentaje(n1, n2, n3, n4, porc1, porc2, porc3, porc4);
   
   // Mostramos el resultado
   const estado = promedioConPorcentaje >= 4.0 ? "Aprobado" : "Reprobado";
-  resultado.textContent = `Promedio: ${promedio.toFixed(1)} — ${estado}`;
+  resultado.textContent = `Promedio: ${promedioConPorcentaje.toFixed(1)} — ${estado}`;
 });
