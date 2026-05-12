@@ -9,6 +9,14 @@ body {
   padding: 40px;
 }
 
+h1{
+  text-align: center;
+}
+
+label{
+  text-align: center;
+}
+
 .contenedor {
   background: white;
   padding: 30px;
@@ -55,8 +63,4 @@ button {
   display: flex;
   justify-content: space-around;
   gap: 15px;
-}
-
-h1{
-  text-align: center;
 }
